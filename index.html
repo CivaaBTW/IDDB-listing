@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civaa & Shai | IDDb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .iddb-yellow {
+            color: #f5c518;
+        }
+        .bg-iddb-yellow {
+            background-color: #f5c518;
+        }
+        .star-hover:hover ~ .star-hover {
+            color: #4b5563; /* Tailwind gray-600 */
+        }
+    </style>
+</head>
+<body class="antialiased pb-20">
+
+    <!-- Navbar -->
+    <nav class="bg-zinc-900 border-b border-zinc-800 p-4 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="bg-iddb-yellow text-black font-black text-xl px-2 py-1 rounded shadow-lg tracking-tighter">
+                    IDDb
+                </div>
+                <div class="hidden sm:flex text-zinc-300 text-sm font-semibold items-center gap-1 cursor-pointer hover:text-white transition">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
+            </div>
+            <div class="flex-1 max-w-xl mx-4 hidden md:block">
+                <div class="relative">
+                    <input type="text" placeholder="Search IDDb" class="w-full bg-white text-black px-4 py-1.5 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-zinc-500">
+                    <i class="fas fa-search absolute right-3 top-2 text-zinc-500"></i>
+                </div>
+            </div>
+            <div class="text-white font-semibold text-sm flex items-center gap-2 cursor-pointer hover:text-zinc-300">
+                <div class="bg-zinc-800 p-1.5 rounded-full"><i class="fas fa-user text-xs"></i></div>
+                Sign In
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 mt-6">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+            <div>
+                <h1 class="text-4xl sm:text-5xl font-normal tracking-wide">Civaa & Shai: The First Date</h1>
+                <div class="text-zinc-400 text-sm mt-2 flex items-center gap-3">
+                    <span>2026</span>
+                    <span class="w-1 h-1 bg-zinc-600 rounded-full"></span>
+                    <span class="border border-zinc-600 px-1 rounded text-xs">PG-13</span>
+                    <span class="w-1 h-1 bg-zinc-600 rounded-full"></span>
+                    <span>8h 45m</span>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="flex flex-col items-center md:items-end">
+                    <span class="text-zinc-400 text-xs font-semibold uppercase tracking-wider mb-1">IDDb Rating</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-star iddb-yellow text-2xl"></i>
+                        <div>
+                            <span class="text-xl font-bold">8.3</span><span class="text-zinc-400">/10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <span class="text-zinc-400 text-xs font-semibold uppercase tracking-wider mb-1">Your Rating</span>
+                    <a href="#rating-section" class="flex items-center gap-2 text-blue-500 hover:text-blue-400 transition cursor-pointer group">
+                        <i class="far fa-star text-2xl group-hover:hidden"></i>
+                        <i class="fas fa-star text-2xl hidden group-hover:block"></i>
+                        <span class="text-lg font-semibold font-sans uppercase">Rate</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Media -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-1 mb-8">
+            <div class="md:col-span-1 hidden md:block">
+                <img src="https://placehold.co/400x600/1f1f1f/f5c518?text=Civaa+%26+Shai%5CnThe+First+Date" alt="Movie Poster" class="w-full h-full object-cover rounded-l shadow-xl border border-zinc-800">
+            </div>
+            <div class="md:col-span-3 bg-zinc-800 rounded-r flex items-center justify-center relative min-h-[300px] md:min-h-[400px] overflow-hidden group border border-zinc-800 border-l-0">
+                <!-- Abstract background pattern representing the city and hills -->
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                <div class="z-10 text-center p-8">
+                    <i class="fas fa-play-circle text-6xl text-white opacity-80 group-hover:opacity-100 group-hover:text-yellow-500 transition cursor-pointer shadow-2xl"></i>
+                    <p class="mt-4 text-lg font-medium text-zinc-300">Play Trailer</p>
+                </div>
+                <div class="absolute bottom-4 left-4 z-10 flex gap-2">
+                    <span class="bg-zinc-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold border border-zinc-700">Romance</span>
+                    <span class="bg-zinc-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold border border-zinc-700">Action (Bowling)</span>
+                    <span class="bg-zinc-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold border border-zinc-700">Adventure</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plot & Details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-2">
+                <div class="text-lg text-zinc-200 mb-6 leading-relaxed space-y-4">
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">Act I — The Lake.</strong> Swan boats, a skyline view, and the first real conversation of the day.</p>
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">The Intermission.</strong> Lemonade and talk at a quiet coffee shop.</p>
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">The Plot Twist.</strong> Bowling alley #1: closed for a private tournament. Denied.</p>
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">Act II — The Summit.</strong> A hill-park climb ends with all four boroughs laid out below. Just the two of them.</p>
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">The Redemption Arc.</strong> Bowling alley #2, better than the first. Civaa takes game one. Shai takes the next two — and demolishes game three, 106 to 55. Her friends make a cameo.</p>
+                    <p><strong class="text-white font-bold tracking-wide uppercase text-sm mr-2 border-b-2 border-yellow-500">Finale.</strong> Shake Shack and the Little King & Queen show at the Londoner. Home by 11:45pm.</p>
+                </div>
+                
+                <div class="border-t border-zinc-800 py-4">
+                    <div class="flex gap-4">
+                        <span class="font-bold text-white w-24">Director</span>
+                        <a href="#" class="text-blue-400 hover:underline">Destiny</a>
+                    </div>
+                </div>
+                <div class="border-t border-zinc-800 py-4">
+                    <div class="flex gap-4">
+                        <span class="font-bold text-white w-24">Stars</span>
+                        <div class="flex flex-wrap gap-2 text-blue-400">
+                            <a href="#" class="hover:underline">Civaa</a> &bull;
+                            <a href="#" class="hover:underline">Shai</a> &bull;
+                            <a href="#" class="hover:underline">Shai's Friends (Cameo)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-b border-zinc-800 py-4 mb-8">
+                    <div class="flex gap-4">
+                        <span class="font-bold text-white w-24">Setting</span>
+                        <span class="text-zinc-300">The Swan Boats, A Closed Arcade, Hill Park, The Bowling Alley, The Londoner</span>
+                    </div>
+                </div>
+
+                <!-- Trivia Section -->
+                <h2 class="text-2xl font-semibold mb-4 border-l-4 border-yellow-500 pl-3">Did You Know?</h2>
+                <div class="bg-zinc-800/50 rounded-lg p-5 mb-8 border border-zinc-700/50">
+                    <ul class="list-disc list-inside text-zinc-300 space-y-3">
+                        <li><strong class="text-white">Trivia:</strong> Despite a strong showing in Game 1 by Civaa, Shai holds the current franchise record with a staggering 106 points in Game 3.</li>
+                        <li><strong class="text-white">Location Scouting:</strong> The hill park scene featured a practical, non-CGI view of four different boroughs simultaneously.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar / Rating Component -->
+            <div class="md:col-span-1" id="rating-section">
+                <div class="bg-zinc-800 border border-zinc-700 rounded-lg p-6 sticky top-24 shadow-2xl">
+                    <h3 class="text-xl font-bold mb-2 text-center">Rate This Date</h3>
+                    <p class="text-zinc-400 text-sm text-center mb-6">Cast your vote for the Civaa & Shai cinematic universe.</p>
+                    
+                    <!-- Rating Stars -->
+                    <div id="rating-container" class="flex flex-col items-center">
+                        <div class="flex flex-row-reverse justify-center group mb-4">
+                            <!-- Note: Using flex-row-reverse allows CSS hover to fill preceding stars -->
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="10"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="9"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="8"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="7"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="6"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="5"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="4"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="3"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="2"></i>
+                            <i class="fas fa-star text-3xl cursor-pointer text-zinc-600 hover:text-yellow-500 peer peer-hover:text-yellow-500 transition-colors star-rating" data-value="1"></i>
+                        </div>
+                        <div id="hover-value" class="h-6 text-yellow-500 font-bold text-lg"></div>
+                    </div>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="success-message" class="hidden text-center animate-fade-in">
+                        <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-check text-2xl text-green-500"></i>
+                        </div>
+                        <p class="text-white font-bold text-lg mb-1">Rating Submitted!</p>
+                        <p class="text-zinc-400 text-sm mb-4">You rated this date <span id="final-score" class="text-yellow-500 font-bold"></span>/10.</p>
+                        <div class="bg-zinc-900 border border-zinc-700 p-3 rounded text-sm text-zinc-300">
+                            📸 <strong>Next Step:</strong> Take a screenshot of this and send it to Civaa!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('.star-rating');
+            const hoverValue = document.getElementById('hover-value');
+            const ratingContainer = document.getElementById('rating-container');
+            const successMessage = document.getElementById('success-message');
+            const finalScoreSpan = document.getElementById('final-score');
+            
+            // Handle hover effects (since we used flex-row-reverse, index calculation is a bit specific)
+            stars.forEach(star => {
+                star.addEventListener('mouseenter', (e) => {
+                    const value = e.target.getAttribute('data-value');
+                    hoverValue.textContent = `${value} / 10`;
+                    
+                    // Highlight logic is handled mostly by CSS peer classes, 
+                    // but we ensure JS updates the text below the stars.
+                });
+
+                star.addEventListener('mouseleave', () => {
+                    hoverValue.textContent = '';
+                });
+
+                // Handle click to submit rating
+                star.addEventListener('click', (e) => {
+                    const value = e.target.getAttribute('data-value');
+                    
+                    // Hide the stars and show success message
+                    ratingContainer.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    
+                    // Update the text in the success message
+                    finalScoreSpan.textContent = value;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
